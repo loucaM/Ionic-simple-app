@@ -1,3 +1,16 @@
 page-quotes {
+    .author{
+        color: rgba(39, 4, 4, 0.623);
+        text-align: right;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+
+        &:before{
+            content:'- '
+        }
+    }
+
+
 
 }
