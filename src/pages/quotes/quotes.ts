@@ -55,7 +55,7 @@ export class QuotesPage implements OnInit {
   }
 
   isFavorite(quote: Quote) {
-    
+    return this.quotesService.isQuoteFavorite(quote);
   }
 
   ionViewDidLoad() {
