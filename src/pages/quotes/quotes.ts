@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Quote } from '../data/quote.interface';
 import { OnInit } from '@angular/core';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { QuotesService } from '../../app/services/quotes';
 
 @IonicPage()
 @Component({
@@ -15,12 +16,17 @@ export class QuotesPage implements OnInit {
   }
   quoteGroup: {category: string, quotes: Quote[], icon: string} ;
   
-  constructor(public navCtrl: NavController, private navParams: NavParams, private alertCtrl: AlertController) {
+  constructor(
+    private navCtrl: NavController, 
+    private navParams: NavParams, 
+    private alertCtrl: AlertController,
+    private quotesService: QuotesService
+  ) {
 
     //data = les données qu'on a passées sur la page précédente
     
   }
-  ajouterAuxFavoris(){
+  ajouterAuxFavoris(selectedQuote: Quote){
    const alerte =  this.alertCtrl.create({
      title: 'Ajout aux favoris',
      subTitle: 'êtes vous sur ?',
@@ -29,7 +35,7 @@ export class QuotesPage implements OnInit {
        {
          text: 'Oui, allons-y !',
          handler: () => {
-           console.log('Ok');
+           this.quotesService.ajouterCitationAuxFavoris(selectedQuote);
          }
        },
        {
@@ -42,6 +48,14 @@ export class QuotesPage implements OnInit {
    });
    alerte.present();
 
+  }
+
+  supprimerCitationDesFavoris(quote: Quote) {
+
+  }
+
+  isFavorite(quote: Quote) {
+    
   }
 
   ionViewDidLoad() {
