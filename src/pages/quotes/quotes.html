@@ -2,6 +2,11 @@
 <ion-header>
 
   <ion-navbar>
+      <ion-buttons start>
+          <button ion-button menuToggle>
+              <ion-icon name="menu" color="primary"></ion-icon>
+          </button>
+        </ion-buttons>
      <!-- charge la liste des catégories seulement si celle ci est valable -->
     <ion-title>{{quoteGroup?.category}}</ion-title>
   </ion-navbar>

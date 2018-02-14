@@ -5,6 +5,7 @@ import { QuotesService } from '../../app/services/quotes';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { QuuotePage } from '../quuote/quuote';
 
+
 @IonicPage()
 @Component({
   selector: 'page-favorite',
@@ -16,7 +17,9 @@ quotes: Quote[];
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
      private quotesService: QuotesService,
-    private modalCtrl: ModalController) {  }
+    private modalCtrl: ModalController,
+  
+  ) {  }
   
   // On peut aussi le faire dans un OnInit
   ionViewWillEnter() {
@@ -35,5 +38,7 @@ quotes: Quote[];
     this.quotesService.supprimerCitationDesFavoris(quote);
     this.quotes = this.quotesService.getFavoriteQuotes();
   }
+
+  
 
 }
