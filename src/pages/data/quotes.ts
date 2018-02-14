@@ -1,42 +1,42 @@
 export default [
     {
-        category: 'rap français',
+        category: 'Auteurs français',
         quotes: [
         {
             id: '1',
-            person:'Booba',
-            text:'Je veux pas de ton poisson, je veux que tu m\'apprennes à pêcher'
+            person:'Victor Hugo',
+            text:'On passe une moitié de sa vie à attendre ceux qu\'on aimera et l\'autre moitié à quitter ceux qu\'on aime.'
         },
         {
             id: '2',
-            person:'IAM',
-            text:'Vaut mieux vivre un jour comme un lion que cent comme un chien'
+            person:'Jean-Paul Sartre',
+            text:'Etre libre, ce n\'est pas pouvoir faire ce que l\'on veut, mais c\'est vouloir ce que l\'on peut.'
         },
         {
             id: '3',
-            person:'Rohff',
-            text:'Quand on s’est jamais vendu, comment se racheter ?'
+            person:'Jean-Jacques Rousseau',
+            text:'Il n\'y a point de bonheur sans courage, ni de vertu sans combat.'
         },
         ],
         icon:'md-beer'
     },
     {
-        category: 'rap US',
+        category: 'Autre',
         quotes: [
         {
             id: '4',
-            person:'Kodak Black',
-            text:'Told the doctor I\'m a healthy kid, I smoke broccoli' 
+            person:'Confucius',
+            text:'Exige beaucoup de toi-même et attends peu des autres. Ainsi beaucoup d\'ennuis te seront épargnés.' 
         },
         {
             id: '5',
-            person:'Lil wayne',
-            text:'Real G’s move in silence like Lasagna'
+            person:'Gandhi',
+            text:'La vie est un mystère qu\'il faut vivre, et non un problème à résoudre.'
         },
         {
             id: '6',
-            person:'Mach Hommy',
-            text:'I\'m on my Drizzy shit no new friends no new Benz'
+            person:'Friedrich Nietzsche',
+            text:'Dans la vengeance et en amour, la femme est plus barbare que l\'homme.'
         },
         ],
         icon:'md-basketball'

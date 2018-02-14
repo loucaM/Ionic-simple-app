@@ -51,7 +51,7 @@ export class QuotesPage implements OnInit {
   }
 
   supprimerCitationDesFavoris(quote: Quote) {
-
+    this.quotesService.supprimerCitationDesFavoris(quote);    
   }
 
   isFavorite(quote: Quote) {

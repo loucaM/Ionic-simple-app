@@ -20,14 +20,12 @@ export class QuotesService {
 supprimerDesFavorisById(id: string) {
      const idQuote  = +id ;
      console.log(idQuote+" place");
-     
-
+    
      for (var i = 0; i < this.favoriteQuotes.length; i++) {
         if (+(this.favoriteQuotes[i].id) === idQuote) {
             this.favoriteQuotes.splice(i,1) ;
         }
       }
-    
 }
     // envoyer une copie et non une référence
     getFavoriteQuotes() {
@@ -37,6 +35,6 @@ supprimerDesFavorisById(id: string) {
     isQuoteFavorite(quote: Quote) {
         return this.favoriteQuotes.find((quoteEl: Quote) => {
             return quoteEl.id == quote.id;
-        })
+        });
     }
 }

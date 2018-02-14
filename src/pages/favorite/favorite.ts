@@ -31,4 +31,9 @@ quotes: Quote[];
     })
   }
 
+  onRemoveFromFavorites(quote: Quote) {
+    this.quotesService.supprimerCitationDesFavoris(quote);
+    this.quotes = this.quotesService.getFavoriteQuotes();
+  }
+
 }

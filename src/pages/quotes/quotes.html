@@ -21,7 +21,7 @@
       <ion-row>
         <ion-col text-right>
             <button *ngIf="!isFavorite(quote)"  ion-button clear small (click)="ajouterAuxFavoris(quote)">Ajouter aux favoris</button>
-            <button *ngIf="isFavorite(quote)"  ion-button clear color="danger"small (click)="supprimerCitationDesFavoris(quote)">Supprimer des favoris</button>
+            <button *ngIf="isFavorite(quote)"  ion-button clear color="danger" small (click)="supprimerCitationDesFavoris(quote)">Supprimer des favoris</button>
           </ion-col>
       </ion-row>
 
