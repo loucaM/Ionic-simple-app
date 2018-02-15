@@ -4,6 +4,7 @@ import { Quote } from '../data/quote.interface';
 import { QuotesService } from '../../app/services/quotes';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { QuuotePage } from '../quuote/quuote';
+import { settingsService } from '../../app/services/settingsService';
 
 
 @IonicPage()
@@ -18,6 +19,7 @@ quotes: Quote[];
     public navParams: NavParams,
      private quotesService: QuotesService,
     private modalCtrl: ModalController,
+    private settingsService: settingsService
   
   ) {  }
   
@@ -39,6 +41,8 @@ quotes: Quote[];
     this.quotes = this.quotesService.getFavoriteQuotes();
   }
 
-  
+  getBackBackground() {
+    return this.settingsService.isAltBackground() ? 'altQtBg' : 'quoteBackground';
+  }
 
 }
