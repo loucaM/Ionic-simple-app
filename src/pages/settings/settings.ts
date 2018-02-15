@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Toggle } from 'ionic-angular/components/toggle/toggle';
 import { settingsService } from '../../app/services/settingsService';
 

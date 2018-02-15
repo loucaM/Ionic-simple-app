@@ -6,41 +6,36 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { FavoritePage } from '../pages/favorite/favorite';
 import { SettingsPage } from '../pages/settings/settings';
 import { QuotesPage } from '../pages/quotes/quotes';
-import { LibraryPage } from '../pages/library/library';
-import { QuuotePage } from '../pages/quuote/quuote';
 import { TabsPage } from '../pages/tabs/tabs';
 import { QuotesService } from './services/quotes';
 import { settingsService } from './services/settingsService';
+import { FavoritePageModule } from '../pages/favorite/favorite.module';
+import { LibraryPageModule } from '../pages/library/library.module';
+import { QuotesPageModule } from '../pages/quotes/quotes.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    FavoritePage,
-    SettingsPage,
-    QuotesPage,
-    QuuotePage,
-    LibraryPage,
     HomePage,
     TabsPage
-
-
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    FavoritePageModule,
+    LibraryPageModule,
+    QuotesPageModule,
+        SettingsPageModule,
+    
+   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    FavoritePage,
-    SettingsPage,
-    QuotesPage,
-    QuuotePage,
-    LibraryPage,
     TabsPage
   ],
   providers: [
